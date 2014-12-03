@@ -1,0 +1,46 @@
+<html lang="ko">
+<head>
+<title>jaedo-MatrixChartPlugin</title>
+<meta charset="utf-8">
+</head>
+
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="../js/matrixChart.js"></script>
+
+<script>
+
+	var $select;
+	$(document).ready(function() {		
+		 var list_x = [-15,-10,-5,0,5,10,15,20,25,30,35,40];//[0.0,5.0,10.0,15.0,20.0,25.0,30.0,35.0];
+         var list_y = [0.0,1.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,15.0,16.0];
+         var shapes = [{"value_x":"0","value_y":"1","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"0","value_y":"10","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"5","value_y":"0","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"5","value_y":"3","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"10","value_y":"1","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"10","value_y":"5","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"10","value_y":"6","value_y_ratio":null,"sum_cnt":0,"value_color":"2"},{"value_x":"10","value_y":"8","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"10","value_y":"10","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"10","value_y":"13","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"10","value_y":"15","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"15","value_y":"0","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"15","value_y":"1","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"15","value_y":"3","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"15","value_y":"4","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"15","value_y":"5","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"15","value_y":"6","value_y_ratio":null,"sum_cnt":0,"value_color":"2"},{"value_x":"15","value_y":"7","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"15","value_y":"8","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"15","value_y":"9","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"15","value_y":"10","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"15","value_y":"11","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"15","value_y":"12","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"15","value_y":"13","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"20","value_y":"1","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"20","value_y":"3","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"20","value_y":"4","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"20","value_y":"5","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"20","value_y":"6","value_y_ratio":null,"sum_cnt":0,"value_color":"5"},{"value_x":"20","value_y":"7","value_y_ratio":null,"sum_cnt":0,"value_color":"2"},{"value_x":"20","value_y":"8","value_y_ratio":null,"sum_cnt":0,"value_color":"3"},{"value_x":"20","value_y":"9","value_y_ratio":null,"sum_cnt":0,"value_color":"2"},{"value_x":"20","value_y":"10","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"20","value_y":"11","value_y_ratio":null,"sum_cnt":0,"value_color":"2"},{"value_x":"25","value_y":"0","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"25","value_y":"1","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"25","value_y":"5","value_y_ratio":null,"sum_cnt":0,"value_color":"3"},{"value_x":"25","value_y":"6","value_y_ratio":null,"sum_cnt":0,"value_color":"10"},{"value_x":"25","value_y":"7","value_y_ratio":null,"sum_cnt":0,"value_color":"3"},{"value_x":"25","value_y":"8","value_y_ratio":null,"sum_cnt":0,"value_color":"5"},{"value_x":"25","value_y":"9","value_y_ratio":null,"sum_cnt":0,"value_color":"2"},{"value_x":"25","value_y":"10","value_y_ratio":null,"sum_cnt":0,"value_color":"2"},{"value_x":"25","value_y":"11","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"30","value_y":"0","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"30","value_y":"1","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"30","value_y":"3","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"30","value_y":"4","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"30","value_y":"5","value_y_ratio":null,"sum_cnt":0,"value_color":"4"},{"value_x":"30","value_y":"6","value_y_ratio":null,"sum_cnt":0,"value_color":"4"},{"value_x":"30","value_y":"7","value_y_ratio":null,"sum_cnt":0,"value_color":"2"},{"value_x":"30","value_y":"8","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"30","value_y":"10","value_y_ratio":null,"sum_cnt":0,"value_color":"2"},{"value_x":"30","value_y":"11","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"30","value_y":"13","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"30","value_y":"16","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"35","value_y":"6","value_y_ratio":null,"sum_cnt":0,"value_color":"1"},{"value_x":"35","value_y":"16","value_y_ratio":null,"sum_cnt":0,"value_color":"1"}];
+        
+       var $select = $("#vContent").MatrixChartPlugin(
+                 {
+                      shapeSize_width:30,
+                      shapeSize_height:30,
+                      shapeBlank_color:'#FFCC00',
+                      yAxis_line_width:'10',
+                      list_x : list_x,
+                      list_y : list_y,
+                      shapes: shapes
+                 }
+       ).data('plugin_MatrixChartPlugin');
+		
+	});
+
+</script>
+<style>
+
+
+
+</style>
+<div id="vContent"></div>
+
+</body>
+
+</html>
+
+
+
